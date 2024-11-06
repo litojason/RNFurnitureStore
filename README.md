@@ -1,79 +1,87 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Furniture Store (RNFurnitureStore)
 
-# Getting Started
+Furniture Store mobile app built with Typescript, React Native, Redux Toolkit.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Figma Design
 
-## Step 1: Start the Metro Server
+- Presentation View (Prototype): [Jason Furniture Store's Prototype](https://www.figma.com/proto/vOntm5dRAkYiK1en1iF2pw/Jason-Furniture-Store?node-id=9-6&t=LOTPKuSc16nWTmnC-1)
+- Dev Mode Link: [Jason Furniture Store's Dev Mode](https://www.figma.com/design/vOntm5dRAkYiK1en1iF2pw/Jason-Furniture-Store?node-id=0-1&m=dev&t=LOTPKuSc16nWTmnC-1)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+<div style='display:grid;gap:16px 16px;grid-template-columns: auto auto;'>
+    <img src="/src/assets/figma/1-initial-screen.png">
+    <img src="/src/assets/figma/2-home-category-furniture-screen.png">
+    <img src="/src/assets/figma/3-cart-checkout-orders-screen.png">
+    <img src="/src/assets/figma/4-search-screen.png">
+    <img src="/src/assets/figma/5-favorite-profile-screen.png">
+    <img src="/src/assets/figma/6-payment-method-address-screen.png">
 
-To start Metro, run the following command from the _root_ of your React Native project:
+</div>
+
+## API Used In This Project
+
+- Node Sequelize Furniture Store: [node-sequelize-furniture-store](https://github.com/litojason/node-sequelize-furniture-store)
+
+## Additional Dependencies
+
+Please refer to `package.json`.
+
+- [React Navigation](https://reactnavigation.org/): routing and navigation (Native Stack, Drawer)
+- [React Hook Form](https://react-hook-form.com/): manage forms
+- [yup](https://www.npmjs.com/package/yup): validation
+- [Redux Toolkit](https://redux-toolkit.js.org/): state management
+- [React Native Vector Icons](https://www.npmjs.com/package/react-native-vector-icons): customizable vector icons
+- [axios](https://www.npmjs.com/package/axios): promise based HTTP client
+- [moment](https://momentjs.com/): parse and display dates and times
+
+## Installation
+
+    git clone https://github.com/litojason/RNFurnitureStore
+
+    cd RNFurnitureStore
+
+    yarn
+
+    yarn pod
+
+## Setup Env
+
+Please open /src/client.ts folder and change `API_URL`
+
+```ts
+const Config = {
+  API_URL: 'YOUR_OWN_API_URL', -> Change to your url
+};
+```
+
+## Run
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
+# Start
 yarn start
-```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
+## Open in other terminal after yarn start
+# Android
 yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
+# iOS
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Feature Done (But May Need Improvement)
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+- Login, Register, Edit Profile, Change Password.
+- Show Category, Furniture, Furniture Option, Search Furniture.
+- Add To Cart, Delete Cart Item.
+- Add User Address, User Payment Method.
+- Get User Orders, Order Details.
 
-## Step 3: Modifying your App
+## Todo
 
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Update Furniture image and other image from url.
+- Update Cart Item quantity.
+- Add Update Order Status API and update UI accordingly.
+- Add User Favorite API.
+- Add Furniture Review API.
+- Add Discount API.
+- Add multiple env variable.
+- Add App Icon.
+- Change App Theme.
